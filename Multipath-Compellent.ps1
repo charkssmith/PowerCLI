@@ -1,5 +1,3 @@
-Test
-Test123
 Connect-ViServer xxxxx -Credential (Get-Credential)
 
 foreach($esx in Get-VMHost){
