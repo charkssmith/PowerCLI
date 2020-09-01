@@ -1,4 +1,7 @@
-Connect-ViServer xxxx -Credential (Get-Credential)
+#set variables
+$vcenter = "vcenter.domain.com"
+
+connect-viserver $vcenter #comment this line out if you are already connected to your vCenter
 
 # PowerCLI Script to Configure DNS and NTP on ESXi Hosts
 # PowerCLI Session must be connected to vCenter Server using Connect-VIServer
