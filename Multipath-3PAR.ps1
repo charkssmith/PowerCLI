@@ -6,3 +6,5 @@ foreach($esx in Get-VMHost){
     $result = $esxcli.storage.nmp.satp.rule.add($null,"tpgs_on","HP3PAR Custom iSCSI/FC/FCoE ALUA Rule",$null,$null,$null,"VV",$null,"VMW_PSP_RR","iops=1","VMW_SATP_ALUA",$null,$null,"3PARdata")
     Write-Host "Host:", $esx.Name, "Result", $result
 }
+
+Disconnect-VIServer
