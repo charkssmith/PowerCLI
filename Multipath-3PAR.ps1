@@ -1,4 +1,7 @@
-Connect-ViServer xxxxx -Credential (Get-Credential)
+#set variables
+$vcenter = "vcenter.domain.com"
+
+connect-viserver $vcenter #comment this line out if you are already connected to your vCenter
 
 foreach($esx in Get-VMHost){
     $esxcli = Get-EsxCli -VMHost $esx
